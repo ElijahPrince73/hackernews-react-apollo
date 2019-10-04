@@ -7,6 +7,9 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import { InMemoryCache } from "apollo-boost";
 
+import { BrowserRouter } from "react-router-dom";
+
+
 // Pass your GraphQL endpoint to uri
 const client = new ApolloClient({
   uri: "http://localhost:4000/",
@@ -14,9 +17,11 @@ const client = new ApolloClient({
 });
 
 const ApolloApp = AppComponent => (
-  <ApolloProvider client={client}>
-    <AppComponent />
-  </ApolloProvider>
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <AppComponent />
+    </ApolloProvider>
+  </BrowserRouter>
 );
 
 

@@ -20,7 +20,7 @@ class LinkList extends PureComponent {
 
     return (
       <Query query={FEED_QUERY}>
-        {({loading, error, data }) => {
+        {({ loading, error, data }) => {
           if (loading) return <div>Fetching</div>
           if (error) {
             console.log(error);
