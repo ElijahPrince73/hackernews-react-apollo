@@ -18,6 +18,8 @@ class LinkList extends PureComponent {
       }
     `;
 
+    console.log('sfs');
+
     return (
       <Query query={FEED_QUERY}>
         {({ loading, error, data }) => {
